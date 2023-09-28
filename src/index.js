@@ -17,11 +17,13 @@ selector.addEventListener('change', event => {
   onSelectBreed(selectedBreedId);
 });
 
-function onSelectBreed(breedId) {
+function onSelectBreed(event) {
   selector.disabled = true;
   divCatInfo.style.display = 'none';
   Notiflix.Loading.standard('Loading data, please wait...', { overlay: selector });
 
+    const breedId = event.target.value;
+    
   fetchCatByBreed(breedId)
       .then(cat => {
       console.log('Fetched cat info', cat);
