@@ -22,8 +22,6 @@ function onSelectBreed(breedId) {
   divCatInfo.style.display = 'none';
   Notiflix.Loading.standard('Loading data, please wait...', { overlay: selector });
 
- const breedId = currentTarget.value;
-
   fetchCatByBreed(breedId)
       .then(cat => {
       console.log('Fetched cat info', cat);
