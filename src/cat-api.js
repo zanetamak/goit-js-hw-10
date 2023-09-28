@@ -1,6 +1,4 @@
 'use strict'
-console.log('Starting script');
-
 
 import axios from "axios";
 
